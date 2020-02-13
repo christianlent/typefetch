@@ -1,0 +1,20 @@
+{
+  "name": "typefetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "swagger-merger": "^1.4.3",
+    "swagger-parser": "^8.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://zoe.firefly/home/clent/personal/SourceCode/typefetch.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
