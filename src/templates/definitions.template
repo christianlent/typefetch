@@ -1,0 +1,3 @@
+const basePath = ${JSON.stringify(basePath)};
+const host = ${JSON.stringify(host)};
+const pathLookup = ${JSON.stringify(pathLookup)};

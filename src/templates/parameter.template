@@ -1,0 +1,8 @@
+export interface ${name} {
+    ${parameters.map(parameter => `
+        /**
+        * ${parameter.description}
+        */
+        '${parameter.name}'${parameter.required ? "" : "?"}: ${schemaTemplate(parameter.schema || parameter)};
+    `).join('\n')}
+}

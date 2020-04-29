@@ -1,20 +1,76 @@
 {
-  "name": "typefetch",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "swagger-merger": "^1.4.3",
-    "swagger-parser": "^8.0.4"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://zoe.firefly/home/clent/personal/SourceCode/typefetch.git"
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "typefetch",
+	"version": "1.0.0",
+	"description": "A Typescript api generator for OpenAPI using fetch",
+	"bin": {
+		"typefetch": "dist/cli.js"
+	},
+	"main": "dist/typefetch.js",
+	"types": "dist/typefetch.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"cli": "ts-node src/cli.ts",
+		"format": "prettier --write \"src/*.ts\"",
+		"lint": "eslint \"src/*.ts\" --fix",
+		"prepublish": "npm run build",
+		"test": "mocha 'test/**/*.test.ts'",
+		"coverage": "nyc mocha 'test/**/*.test.ts'"
+	},
+	"dependencies": {
+		"commander": "^5.1.0",
+		"prettier": "^2.0.5",
+		"swagger-parser": "^9.0.0"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.11",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.13.4",
+		"@typescript-eslint/eslint-plugin": "^2.29.0",
+		"@typescript-eslint/parser": "^2.29.0",
+		"chai": "^4.2.0",
+		"eslint": "^6.8.0",
+		"mocha": "^7.1.2",
+		"nyc": "^15.0.1",
+		"openapi-types": "^1.3.5",
+		"ts-node": "^8.9.1",
+		"typescript": "^3.8.3",
+		"typescript-parser": "^2.6.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "ssh://zoe.firefly/home/clent/personal/SourceCode/typefetch.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"mocha": {
+		"bail": true,
+		"extension": [
+			"ts"
+		],
+		"full-trace": true,
+		"require": "ts-node/register",
+		"watch-files": [
+			"test/**/*.test.ts"
+		]
+	},
+	"nyc": {
+		"extension": [
+			".ts"
+		],
+		"include": [
+			"src"
+		],
+		"reporter": [
+			"text-summary"
+		],
+		"sourceMap": true,
+		"instrument": true,
+		"all": true
+	},
+	"prettier": {
+		"useTabs": true
+	}
 }

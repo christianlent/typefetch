@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"lib": ["es2017", "dom"],
+		"target": "es6",
+		"module": "commonjs",
+		"declaration": true,
+		"esModuleInterop": true,
+		"outDir": "./dist",
+		"resolveJsonModule": true,
+		"strict": false
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/templates/*"]
+}

@@ -1,0 +1,13 @@
+/**
+	* ${pathInfo.summary}
+	* @remarks
+	* ${pathInfo.description}
+	* ${(pathInfo.tags || []).join(', ')}
+*/
+export type ${name} = (
+	pathParams: ${pathName},
+	body: ${bodyName},
+	options: RequestInit & {
+		headers: ${headerName},
+	}
+) => Promise<${responseNames.join(' | ')}>

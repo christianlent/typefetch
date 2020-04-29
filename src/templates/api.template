@@ -1,0 +1,5 @@
+interface Api {
+    ${calls.map(({name, content}) =>
+        `"${name}": ${content};`
+    ).join('\n')}
+}
