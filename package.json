@@ -5,6 +5,7 @@
 	"bin": {
 		"typefetch": "dist/cli.js"
 	},
+	"license": "MIT",
 	"main": "dist/typefetch.js",
 	"types": "dist/typefetch.d.ts",
 	"files": [
@@ -44,7 +45,6 @@
 		"url": "ssh://zoe.firefly/home/clent/personal/SourceCode/typefetch.git"
 	},
 	"author": "",
-	"license": "ISC",
 	"mocha": {
 		"bail": true,
 		"extension": [
