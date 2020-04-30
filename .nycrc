@@ -1,0 +1,19 @@
+{
+    "branches": 88,
+    "lines": 88,
+    "functions": 88,
+    "statements": 88,
+    "check-coverage": true,
+    "extension": [
+        ".ts"
+    ],
+    "include": [
+        "src"
+    ],
+    "reporter": [
+        "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "all": true
+}
