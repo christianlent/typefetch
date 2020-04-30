@@ -56,20 +56,6 @@
 			"test/**/*.test.ts"
 		]
 	},
-	"nyc": {
-		"extension": [
-			".ts"
-		],
-		"include": [
-			"src"
-		],
-		"reporter": [
-			"text-summary"
-		],
-		"sourceMap": true,
-		"instrument": true,
-		"all": true
-	},
 	"prettier": {
 		"useTabs": true
 	}
